@@ -28,26 +28,17 @@
         <ojdbc6.version>11.2.0.3</ojdbc6.version>
         <mysql.connector.version>8.0.17</mysql.connector.version>
         <lombok.version>1.18.10</lombok.version>
+        <pool2.version>2.7.0</pool2.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!--  redis -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-redis</artifactId>
-            </dependency>
-
-            <!--Spring Session redis-->
-            <dependency>
-                <groupId>org.springframework.session</groupId>
-                <artifactId>spring-session-data-redis</artifactId>
-            </dependency>
-
             <!--  pool2 -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-pool2</artifactId>
+                <version>${pool2.version}</version>
+
             </dependency>
 
             <!-- &lt;!&ndash;  ojdbc6 &ndash;&gt;
