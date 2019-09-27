@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>spring-boot</artifactId>
+        <groupId>co.goho.qingxu</groupId>
+        <version>0.0.1</version>
+    </parent>
+
+    <artifactId>spring-boot-webful</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>co.goho.qingxu</groupId>
+            <artifactId>spring-boot-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+        <!-- &lt;!&ndash;  ojdbc6 &ndash;&gt;
+         <dependency>
+             <groupId>com.oracle</groupId>
+             <artifactId>ojdbc6</artifactId>
+         </dependency>-->
+
+        <!--  mysql -->
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
