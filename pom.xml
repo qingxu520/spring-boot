@@ -1,95 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<modules>
-		<module>spring-boot-web</module>
-		<module>spring-boot-service</module>
-		<module>spring-boot-dao</module>
-		<module>spring-boot-bean</module>
-		<module>spring-boot-common</module>
-	</modules>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.8.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>co.goho.qingxu</groupId>
-	<artifactId>spring-boot</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot</name>
-	<description>Demo project for Spring Boot</description>
-	<packaging>pom</packaging>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>spring-boot-web</module>
+        <module>spring-boot-bean</module>
+        <module>spring-boot-common</module>
+        <module>spring-boot-service</module>
+        <module>spring-boot-dao</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.8.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>co.goho.qingxu</groupId>
+    <artifactId>spring-boot</artifactId>
+    <version>0.0.1</version>
+    <name>spring-boot</name>
+    <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
 
-	<properties>
-		<java.version>1.8</java.version>
-		<springBoot.version>2.1.8.RELEASE</springBoot.version>
-		<ojdbc6.version>11.2.0.3</ojdbc6.version>
-		<mysql.connector.version>8.0.17</mysql.connector.version>
-		<lombok.version>1.18.10</lombok.version>
-	</properties>
+    <properties>
+        <java.version>1.8</java.version>
+        <springBoot.version>2.1.8.RELEASE</springBoot.version>
+        <ojdbc6.version>11.2.0.3</ojdbc6.version>
+        <mysql.connector.version>8.0.17</mysql.connector.version>
+        <lombok.version>1.18.10</lombok.version>
+    </properties>
 
-	<dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <!--  redis -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+            </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+            <!--Spring Session redis-->
+            <dependency>
+                <groupId>org.springframework.session</groupId>
+                <artifactId>spring-session-data-redis</artifactId>
+            </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+            <!--  pool2 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+            </dependency>
 
-		<!--  spring-data-jpa -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
+            <!-- &lt;!&ndash;  ojdbc6 &ndash;&gt;
+             <dependency>
+                 <groupId>com.oracle</groupId>
+                 <artifactId>ojdbc6</artifactId>
+                 <version>${ojdbc6.version}</version>
+             </dependency>-->
 
-		<!--  redis -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
-		</dependency>
-
-		<!--Spring Session redis-->
-		<dependency>
-			<groupId>org.springframework.session</groupId>
-			<artifactId>spring-session-data-redis</artifactId>
-		</dependency>
-
-		<!--  pool2 -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-pool2</artifactId>
-		</dependency>
-
-		<!-- &lt;!&ndash;  ojdbc6 &ndash;&gt;
-         <dependency>
-             <groupId>com.oracle</groupId>
-             <artifactId>ojdbc6</artifactId>
-             <version>${ojdbc6.version}</version>
-         </dependency>-->
-
-		<!--  mysql -->
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.connector.version}</version>
-		</dependency>
+            <!--  mysql -->
+            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
 
 
-		<!--  lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>${lombok.version}</version>
-		</dependency>
+            <!--  lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
 
-	</dependencies>
-
+        </dependencies>
+    </dependencyManagement>
 </project>
