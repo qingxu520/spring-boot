@@ -11,5 +11,12 @@
 
     <artifactId>spring-boot-bean</artifactId>
 
+<dependencies>
+    <dependency>
+        <groupId>co.goho.qingxu</groupId>
+        <artifactId>spring-boot-common</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+</dependencies>
 
 </project>
