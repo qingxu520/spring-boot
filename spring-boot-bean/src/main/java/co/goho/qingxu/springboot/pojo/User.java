@@ -11,14 +11,13 @@ import javax.persistence.Table;
  * @Data相当于@Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode这5个注解的合集。
  * callSuper=true可以调用父类属性
  */
-@Entity
+@Entity(name = "tb_user")
 @Getter
 @Setter
 @ToString
 @EqualsAndHashCode(callSuper=true)//callSuper=true可以调用父类属性
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "tb_user")
 public class User extends BaseEntity {
     private static final long serialVersionUID = 1L;
 

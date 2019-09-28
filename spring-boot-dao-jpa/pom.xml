@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-dao</artifactId>
+    <artifactId>spring-boot-dao-jpa</artifactId>
 
     <dependencies>
         <dependency>

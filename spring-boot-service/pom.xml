@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>co.goho.qingxu</groupId>
-            <artifactId>spring-boot-dao</artifactId>
+            <artifactId>spring-boot-dao-jpa</artifactId>
             <version>0.0.1</version>
         </dependency>
     </dependencies>

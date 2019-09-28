@@ -7,7 +7,7 @@
         <module>spring-boot-bean</module>
         <module>spring-boot-common</module>
         <module>spring-boot-service</module>
-        <module>spring-boot-dao</module>
+        <module>spring-boot-dao-jpa</module>
         <module>spring-boot-webflux</module>
     </modules>
     <parent>
