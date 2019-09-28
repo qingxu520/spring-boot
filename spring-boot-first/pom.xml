@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-boot</artifactId>
+        <groupId>co.goho.qingxu</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>spring-boot-web</module>
+        <module>spring-boot-bean</module>
+        <module>spring-boot-common</module>
+        <module>spring-boot-service</module>
+        <module>spring-boot-dao-jpa</module>
+        <module>spring-boot-webflux</module>
+    </modules>
+
+    <packaging>pom</packaging>
+    <groupId>co.goho.qingxu</groupId>
+    <artifactId>spring-boot-first</artifactId>
+    <version>0.0.1</version>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <springBoot.version>2.1.8.RELEASE</springBoot.version>
+        <ojdbc6.version>11.2.0.3</ojdbc6.version>
+        <mysql.connector.version>8.0.17</mysql.connector.version>
+        <lombok.version>1.18.10</lombok.version>
+        <pool2.version>2.7.0</pool2.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--  pool2 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${pool2.version}</version>
+
+            </dependency>
+
+            <!-- &lt;!&ndash;  ojdbc6 &ndash;&gt;
+             <dependency>
+                 <groupId>com.oracle</groupId>
+                 <artifactId>ojdbc6</artifactId>
+                 <version>${ojdbc6.version}</version>
+             </dependency>-->
+
+            <!--  mysql -->
+            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+
+
+            <!--  lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

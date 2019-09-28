@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>spring-boot</artifactId>
+        <artifactId>spring-boot-first</artifactId>
         <groupId>co.goho.qingxu</groupId>
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>spring-boot-webful</artifactId>
+    <artifactId>spring-boot-webflux</artifactId>
 
     <dependencies>
         <dependency>
