@@ -1,0 +1,32 @@
+qingxu:
+  title: 轻许
+  description: 轻许的learn
+logging:
+  path: /log
+  level:
+    root: WARN
+    org:
+      springframework:
+        web: DEBUG
+      hibernate: ERROR
+
+spring:
+  datasource:
+    #test:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: test
+    password: 111111
+
+test1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.0.251:3306/test
+      username: test
+      password: 111111
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: co.goho.qingxu.mybatisone.mapper
+
+server:
+  port: 8000

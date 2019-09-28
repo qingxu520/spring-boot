@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>spring-boot-first</module>
+        <module>spring-boot-manydatasources</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
