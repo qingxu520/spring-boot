@@ -14,35 +14,35 @@ import java.util.Date;
 @MappedSuperclass
 public class BaseEntity implements Serializable {
     @Transient
-    private static final long serialVersionUID = 1L;
+    protected static final long serialVersionUID = 1L;
 
     /*主键id*/
     @Id
-    private String id;
+    protected String id;
 
     /*创建时间*/
     @Column(nullable = false)
-    private Date createDate;
+    protected Date createDate;
 
     /*更新时间*/
     @Column(nullable = false)
-    private Date updateDate;
+    protected Date updateDate;
 
     /*创建人id*/
     @Column(nullable = false)
-    private String createBy;
+    protected String createBy;
 
     /*更新人id*/
     @Column(nullable = false)
-    private String updateBy;
+    protected String updateBy;
 
     /*删除标识 0:未删除 ；1:已删除*/
     @Column(nullable = false)
-    private String delFlag="0";
+    protected String delFlag="0";
 
     /*是否新增 true*/
     @Transient
-    private Boolean newFlag = true;
+    protected Boolean newFlag = true;
 
     public void inParst(){
         setId(UuIdUtil.getUuID());
