@@ -23,4 +23,15 @@ public class UserController {
         return userService.selectAll();
     }
 
+    @RequestMapping("/selectAll1")
+    @ResponseBody
+    public Map<String,List<User>> selectAll1(){
+        return userService.selectAll1();
+    }
+
+    @RequestMapping("/selectAll2")
+    @ResponseBody
+    public Map<String,List<User>> selectAll2(){
+        return userService.selectAll2();
+    }
 }

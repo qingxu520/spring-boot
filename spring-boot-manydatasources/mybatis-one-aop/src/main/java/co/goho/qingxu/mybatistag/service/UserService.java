@@ -1,7 +1,8 @@
 package co.goho.qingxu.mybatistag.service;
 
+import co.goho.qingxu.mybatistag.config.datasource.DataSource;
+import co.goho.qingxu.mybatistag.config.datasource.DataSourceNames;
 import co.goho.qingxu.mybatistag.mapper.UserMapper;
-import co.goho.qingxu.mybatistag.mapper1.UserMapper1;
 import co.goho.qingxu.mybatistag.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,15 +17,24 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-    @Autowired
-    private UserMapper1 userMapper1;
-
+    @DataSource("test")
     public Map<String,List<User>> selectAll(){
         Map map = new HashMap();
         map.put("user",userMapper.selectAll());
-        map.put("user1",userMapper1.selectAll());
         return map;
     }
 
+    @DataSource("test1")
+    public Map<String,List<User>> selectAll1(){
+        Map map = new HashMap();
+        map.put("user1",userMapper.selectAll());
+        return map;
+    }
+
+    public Map<String,List<User>> selectAll2(){
+        Map map = new HashMap();
+        map.put("user2",userMapper.selectAll());
+        return map;
+    }
 
 }
