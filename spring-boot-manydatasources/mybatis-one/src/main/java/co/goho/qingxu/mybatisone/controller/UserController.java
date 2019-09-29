@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -18,7 +19,7 @@ public class UserController {
 
     @RequestMapping("/selectAll")
     @ResponseBody
-    public List<User> selectAll(){
+    public Map<String,List<User>> selectAll(){
         return userService.selectAll();
     }
 
