@@ -11,6 +11,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>mybatis-one</module>
+        <module>mybatis-one-tag</module>
+        <module>spring-data-jpa</module>
     </modules>
 
     <artifactId>spring-boot-manydatasources</artifactId>

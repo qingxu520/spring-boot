@@ -1,0 +1,14 @@
+package co.goho.qingxu.mybatis.mapper;
+
+import co.goho.qingxu.mybatis.pojo.User;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Mapper
+@Repository
+public interface UserMapper {
+
+    List<User> selectAll();
+}
