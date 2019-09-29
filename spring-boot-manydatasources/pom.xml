@@ -13,6 +13,7 @@
         <module>mybatis-one</module>
         <module>mybatis-one-aop</module>
         <module>spring-data-jpa</module>
+        <module>spring-data-jpa-aop</module>
     </modules>
 
     <artifactId>spring-boot-manydatasources</artifactId>

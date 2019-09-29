@@ -17,14 +17,14 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-    @DataSource("test")
+    @DataSource(value=DataSourceNames.FIRST)
     public Map<String,List<User>> selectAll(){
         Map map = new HashMap();
         map.put("user",userMapper.selectAll());
         return map;
     }
 
-    @DataSource("test1")
+    @DataSource(value = DataSourceNames.SECOND)
     public Map<String,List<User>> selectAll1(){
         Map map = new HashMap();
         map.put("user1",userMapper.selectAll());

@@ -25,14 +25,14 @@ public class DataSourceConfig {
     @Value("${mybatis.mapper-locations}")
     private String mapperLocations;
 
-    @Bean(name = "test")
+    @Bean(name = DataSourceNames.FIRST)
     @Primary//  注意：这里需要该注解声明是默认数据源
     @ConfigurationProperties(prefix = "spring.datasource.druid.test")
     public DataSource testDateSource() {
         return DruidDataSourceBuilder.create().build();
     }
 
-    @Bean(name = "test1")
+    @Bean(name = DataSourceNames.SECOND)
     @ConfigurationProperties(prefix = "spring.datasource.druid.test1")
     public DataSource test1DateSource() {
         return DruidDataSourceBuilder.create().build();
@@ -42,8 +42,8 @@ public class DataSourceConfig {
     public DataSource dynamicDataSource() {
         // 配置多数据源
         Map<String, DataSource> dataBaseMap = new HashMap<>(16);
-        dataBaseMap.put("test", testDateSource());
-        dataBaseMap.put("test1", test1DateSource());
+        dataBaseMap.put(DataSourceNames.FIRST, testDateSource());
+        dataBaseMap.put(DataSourceNames.SECOND, test1DateSource());
         DynamicDataSource dynamicDataSource = new DynamicDataSource(testDateSource(),dataBaseMap);
         // 默认数据源
         return dynamicDataSource;

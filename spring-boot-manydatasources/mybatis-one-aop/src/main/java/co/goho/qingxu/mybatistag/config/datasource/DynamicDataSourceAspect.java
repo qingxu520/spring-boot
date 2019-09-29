@@ -30,7 +30,7 @@ public class DynamicDataSourceAspect {
         String methodName = point.getSignature().getName();
         //得到方法的参数的类型
         Class[] argClass = ((MethodSignature)point.getSignature()).getParameterTypes();
-        String dataSource = DataSourceNames.FIRSRT.getName();
+        String dataSource = DataSourceNames.FIRST;
         try {
             // 得到访问的方法对象
             Method method = className.getMethod(methodName, argClass);
@@ -38,7 +38,7 @@ public class DynamicDataSourceAspect {
             if (method.isAnnotationPresent(DataSource.class)) {
                 DataSource annotation = method.getAnnotation(DataSource.class);
                 if (annotation == null) {
-                    dataSource = DataSourceNames.FIRSRT.getName();
+                    dataSource = DataSourceNames.FIRST;
                 } else {
                     dataSource = annotation.value();
                 }
