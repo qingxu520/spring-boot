@@ -1,6 +1,6 @@
-package co.goho.qingxu.jpa.pojo;
+package co.goho.qingxu.jpaaop.pojo;
 
-import co.goho.qingxu.jpa.common.bean.BaseEntity;
+import co.goho.qingxu.jpaaop.common.bean.BaseEntity;
 import lombok.*;
 
 import javax.persistence.Column;

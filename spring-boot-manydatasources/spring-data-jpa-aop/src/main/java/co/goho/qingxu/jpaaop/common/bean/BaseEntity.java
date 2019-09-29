@@ -1,6 +1,6 @@
-package co.goho.qingxu.jpa.common.bean;
+package co.goho.qingxu.jpaaop.common.bean;
 
-import co.goho.qingxu.jpa.common.utils.UuIdUtil;
+import co.goho.qingxu.jpaaop.common.utils.UuIdUtil;
 import lombok.Data;
 
 import javax.persistence.Column;

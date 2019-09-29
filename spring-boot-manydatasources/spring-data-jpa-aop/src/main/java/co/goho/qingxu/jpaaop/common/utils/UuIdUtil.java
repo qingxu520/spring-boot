@@ -1,4 +1,4 @@
-package co.goho.qingxu.jpa.common.utils;
+package co.goho.qingxu.jpaaop.common.utils;
 
 import java.util.UUID;
 

@@ -1,6 +1,6 @@
-package co.goho.qingxu.jpa.dao;
+package co.goho.qingxu.jpaaop.dao;
 
-import co.goho.qingxu.jpa.pojo.User;
+import co.goho.qingxu.jpaaop.pojo.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

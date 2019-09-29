@@ -1,7 +1,7 @@
-package co.goho.qingxu.jpa.controller;
+package co.goho.qingxu.jpaaop.controller;
 
-import co.goho.qingxu.jpa.pojo.User;
-import co.goho.qingxu.jpa.service.UserService;
+import co.goho.qingxu.jpaaop.pojo.User;
+import co.goho.qingxu.jpaaop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,6 +21,17 @@ public class UserController {
     @ResponseBody
     public Map<String,List<User>> selectAll(){
         return userService.selectAll();
+    }
+    @RequestMapping("/selectAll1")
+    @ResponseBody
+    public Map<String,List<User>> selectAll1(){
+        return userService.selectAll1();
+    }
+
+    @RequestMapping("/selectAll2")
+    @ResponseBody
+    public Map<String,List<User>> selectAll2(){
+        return userService.selectAll2();
     }
 
 }
