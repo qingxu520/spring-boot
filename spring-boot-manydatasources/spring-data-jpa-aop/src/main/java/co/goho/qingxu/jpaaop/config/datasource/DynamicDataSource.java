@@ -12,7 +12,12 @@ import java.util.Map;
  * @description: 数据源设置类
  */
 public class DynamicDataSource extends AbstractRoutingDataSource {
-    private Logger logger = LogManager.getLogger("TestController");
+    private Logger logger = LogManager.getLogger("UserController");
+    /**
+     * 线程独立
+     */
+    private static ThreadLocal<String> contextHolder = new ThreadLocal<String>();
+
 
     public DynamicDataSource(DataSource defaultTargetDataSource, Map<String, DataSource> targetDataSources) {
         // 默认数据源
@@ -25,11 +30,6 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
         logger.info("当前数据源：{}" + getDataBaseType());
         return getDataBaseType();
     }
-
-    /**
-     * 线程独立
-     */
-    private static ThreadLocal<String> contextHolder = new ThreadLocal<String>();
 
     public static String getDataBaseType() {
         return contextHolder.get();

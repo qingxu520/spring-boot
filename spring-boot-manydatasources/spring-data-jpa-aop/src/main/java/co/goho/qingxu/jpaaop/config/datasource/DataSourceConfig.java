@@ -15,7 +15,6 @@ import java.util.Map;
 public class DataSourceConfig {
 
     @Bean(name = DataSourceNames.FIRST)
-    @Primary//  注意：这里需要该注解声明是默认数据源
     @ConfigurationProperties(prefix = "spring.datasource.druid.test")
     public DataSource testDateSource() {
         return DruidDataSourceBuilder.create().build();
@@ -28,6 +27,7 @@ public class DataSourceConfig {
     }
 
     @Bean(name = "dynamicDataSource")
+    @Primary//  注意：这里需要该注解声明是默认数据源
     public DataSource dynamicDataSource() {
         // 配置多数据源
         Map<String, DataSource> dataBaseMap = new HashMap<>();

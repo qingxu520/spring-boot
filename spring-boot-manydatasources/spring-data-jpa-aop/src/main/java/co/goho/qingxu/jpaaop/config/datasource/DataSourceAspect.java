@@ -15,13 +15,13 @@ import java.lang.reflect.Method;
 /**
  * 多数据源，切面处理类 处理带有注解的方法类
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class DataSourceAspect implements Ordered {
 
     protected Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Pointcut("@annotation(DataSource)")//注意：这里的xxxx代表的是上面public @interface DataSource这个注解DataSource的包名
+    @Pointcut("@annotation(co.goho.qingxu.jpaaop.config.datasource.DataSource)")//注意：这里的xxxx代表的是上面public @interface DataSource这个注解DataSource的包名
     public void dataSourcePointCut() {
 
     }

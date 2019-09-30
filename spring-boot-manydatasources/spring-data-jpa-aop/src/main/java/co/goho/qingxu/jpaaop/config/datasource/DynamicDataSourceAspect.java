@@ -15,12 +15,11 @@ import java.lang.reflect.Method;
 /**
  * @description: 动态切换数据源类
 */
-//@Aspect
-//@Component
-//@Order(-10)
+@Aspect
+@Component
+@Order(-10)
 public class DynamicDataSourceAspect {
     private Logger logger =  LogManager.getLogger("DynamicDataSourceAspect");
-
 
     @Before("@annotation(co.goho.qingxu.jpaaop.config.datasource.DataSource)")
     public void beforeSwitchDS(JoinPoint point){
