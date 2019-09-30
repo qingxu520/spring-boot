@@ -17,11 +17,9 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "co.goho.qingxu.mybatisone.mapper", sqlSessionTemplateRef  = "testSqlSessionTemplate")
+@MapperScan(basePackages = "co.goho.qingxu.mybatis.mapper", sqlSessionTemplateRef  = "testSqlSessionTemplate")
 public class DataSourceConfig {
 
-    @Value("${mybatis.test.type-aliases-package}")
-    private String basePackages;
     @Value("${mybatis.test.mapper-locations}")
     private String mapperLocations;
 
@@ -37,6 +35,10 @@ public class DataSourceConfig {
     public SqlSessionFactory testSqlSessionFactory(@Qualifier("testDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
+        //开启驼峰命名
+        org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
+        configuration.setMapUnderscoreToCamelCase(true);
+        bean.setConfiguration(configuration);
         //添加XML目录
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {

@@ -52,6 +52,10 @@ public class DataSourceConfig {
     @Bean(name = "sqlServerSqlSessionFactory")
     public SqlSessionFactory sqlSessionFactory(@Qualifier("dynamicDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
+        //驼峰命名
+        org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
+        configuration.setMapUnderscoreToCamelCase(true);
+        bean.setConfiguration(configuration);
         bean.setDataSource(dataSource);
         bean.setMapperLocations(new PathMatchingResourcePatternResolver().
                 getResources(mapperLocations));

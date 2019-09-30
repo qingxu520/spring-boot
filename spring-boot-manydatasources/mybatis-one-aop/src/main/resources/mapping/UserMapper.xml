@@ -3,7 +3,18 @@
 <mapper namespace="co.goho.qingxu.mybatistag.mapper.UserMapper">
 
     <resultMap id="BaseResultMap" type="co.goho.qingxu.mybatistag.pojo.User">
-
+        <id property="id" column="id" javaType="java.lang.String"></id>
+        <result property="createBy" column="create_by" javaType="java.lang.String"/>
+        <result property="createDate" column="create_date" javaType="java.util.Date"/>
+        <result property="delFlag" column="del_flag" javaType="java.lang.String"/>
+        <result property="updateBy" column="update_by" javaType="java.lang.String"/>
+        <result property="updateDate" column="update_date" javaType="java.util.Date"/>
+        <result property="email" column="email" javaType="java.lang.String"/>
+        <result property="idcard" column="idcard" javaType="java.lang.String"/>
+        <result property="name" column="name" javaType="java.lang.String"/>
+        <result property="passWord" column="pass_word" javaType="java.lang.String"/>
+        <result property="phone" column="phone" javaType="java.lang.String"/>
+        <result property="userName" column="user_name" javaType="java.lang.String"/>
     </resultMap>
 
     <select id="selectAll" resultType="co.goho.qingxu.mybatistag.pojo.User">
