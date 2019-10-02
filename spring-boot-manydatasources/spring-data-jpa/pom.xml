@@ -10,6 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spring-data-jpa</artifactId>
+    <description>springboot+jpa分包形式切换数据源</description>
+
 
     <dependencies>
         <dependency>

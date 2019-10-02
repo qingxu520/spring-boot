@@ -11,6 +11,8 @@
 
     <artifactId>mybatis-one-tag</artifactId>
 
+    <description>springboot+mybatis+druid的AOP形式动态切换数据源</description>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

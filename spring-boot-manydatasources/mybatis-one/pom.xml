@@ -11,6 +11,8 @@
 
     <artifactId>mybatis-one</artifactId>
 
+    <description>springboot+mybatis分包切换数据源</description>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
