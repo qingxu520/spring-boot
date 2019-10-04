@@ -1,0 +1,67 @@
+qingxu:
+  title: 轻许
+  description: 轻许的learn
+
+logging:
+  path: /log
+  level:
+    root: WARN
+    org:
+      springframework:
+        web: DEBUG
+
+spring:
+  application:
+    name: rabbitmq
+#  datasource:
+#    test:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      jdbc-url: jdbc:mysql://localhost:3306/test
+#      username: test
+#      password: 111111
+#    test1:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      jdbc-url: jdbc:mysql://localhost:3306/test1
+#      username: test
+#      password: 111111
+#  jpa:
+#    open-in-view: false
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#        show_sql: true
+#        format_sql: true
+#        hbm2ddl:
+#          auto: update
+  rabbitmq:
+    password: test
+    username: test
+    port: 5672
+    host: 127.0.0.1
+    #开启发送失败返回
+    publisher-returns: true
+    #开启发送确认
+    publisher-confirms: true
+    listener:
+      simple:
+      #指定最小的消费者数量.
+        concurrency: 2
+      #指定最大的消费者数量.
+        max-concurrency: 2
+      #开启ack
+      # 根据消息消费的情况，智能判定消息的确认情况
+        acknowledge-mode: auto
+      # 发送消息后直接确认消息
+      #acknowledge-mode: none
+      # 手动确认消息的情况
+      #acknowledge-mode: manual
+      #开启ack
+      direct:
+        acknowledge-mode: auto
+    #支持消息的确认与返回
+    template:
+      mandatory: true
+    virtual-host: /
+
+server:
+  port: 8001
