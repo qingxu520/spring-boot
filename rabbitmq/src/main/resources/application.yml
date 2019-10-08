@@ -5,7 +5,7 @@ qingxu:
 logging:
   path: /log
   level:
-    root: WARN
+    root: DEBUG
     org:
       springframework:
         web: DEBUG
@@ -50,14 +50,14 @@ spring:
         max-concurrency: 2
       #开启ack
       # 根据消息消费的情况，智能判定消息的确认情况
-        acknowledge-mode: auto
+        acknowledge-mode: manual
       # 发送消息后直接确认消息
       #acknowledge-mode: none
       # 手动确认消息的情况
       #acknowledge-mode: manual
       #开启ack
       direct:
-        acknowledge-mode: auto
+        acknowledge-mode: manual
     #支持消息的确认与返回
     template:
       mandatory: true

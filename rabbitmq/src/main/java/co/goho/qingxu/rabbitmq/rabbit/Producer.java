@@ -27,27 +27,50 @@ public class Producer implements RabbitTemplate.ConfirmCallback, RabbitTemplate.
     }
 
     // direct模式
-    public void directSend(String message) {
-        log.info("direct模式->发送消息:"+RabbitDic.DIRECT_QUEUE);
-        rabbitTemplate.convertAndSend(RabbitDic.DIRECT_QUEUE, message);
+    public boolean directSend(String message) {
+        log.info("=======direct模式->发送消息:"+RabbitDic.DIRECT_QUEUE);
+        try {
+            rabbitTemplate.convertAndSend(RabbitDic.DIRECT_QUEUE, message);
+        }catch (Exception e){
+            log.error(e.getMessage());
+            return false;
+        }
+        return true;
     }
 
     //发送订阅者模式 topic
-    public void topicSend(String massage) {
+    public boolean topicSend(String massage) {
         CorrelationData cId = new CorrelationData(UuIdUtil.getUuID());
         CorrelationData cId01 = new CorrelationData(UuIdUtil.getUuID());
-        log.info("订阅者模式->发送消息:"+RabbitDic.TOPIC_QUEUE_ONE);
-        rabbitTemplate.convertSendAndReceive(RabbitDic.TOPIC_EXCHANGE, RabbitDic.TOPIC_QUEUE_ONE, massage, cId);
-        log.info("订阅者模式->发送消息:"+RabbitDic.TOPIC_QUEUE_TWO);
-        rabbitTemplate.convertSendAndReceive(RabbitDic.TOPIC_EXCHANGE, RabbitDic.TOPIC_QUEUE_TWO, massage, cId01);
+        log.info("=======订阅者模式->发送消息:"+RabbitDic.TOPIC_QUEUE_ONE);
+        try {
+            rabbitTemplate.convertSendAndReceive(RabbitDic.TOPIC_EXCHANGE, RabbitDic.TOPIC_QUEUE_ONE, massage, cId);
+        }catch (Exception e){
+            log.error(e.getMessage());
+            return false;
+        }
+        log.info("=======订阅者模式->发送消息:"+RabbitDic.TOPIC_QUEUE_TWO);
+        try {
+            rabbitTemplate.convertSendAndReceive(RabbitDic.TOPIC_EXCHANGE, RabbitDic.TOPIC_QUEUE_TWO, massage, cId01);
+        }catch (Exception e){
+            log.error(e.getMessage());
+            return false;
+        }
+        return true;
     }
 
     //广播者模式 fanout
-    public void fanoutSend(String massage) {
+    public boolean fanoutSend(String massage) {
         //回调id
         CorrelationData cId = new CorrelationData(UuIdUtil.getUuID());
-        log.info("订阅者模式->发送消息:"+RabbitDic.FANOUT_EXCHANGE);
-        rabbitTemplate.convertSendAndReceive(RabbitDic.FANOUT_EXCHANGE, "", massage, cId);
+        log.info("=====广播者模式->发送消息:"+RabbitDic.FANOUT_EXCHANGE);
+        try {
+            rabbitTemplate.convertSendAndReceive(RabbitDic.FANOUT_EXCHANGE, "", massage, cId);
+        }catch (Exception e){
+            log.error(e.getMessage());
+            return false;
+        }
+        return true;
     }
 
     /**

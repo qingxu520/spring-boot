@@ -1,24 +1,29 @@
 package co.goho.qingxu.rabbitmq.controler;
 
+import co.goho.qingxu.rabbitmq.common.ResponseApi;
+import co.goho.qingxu.rabbitmq.config.DemoException;
 import co.goho.qingxu.rabbitmq.rabbit.Producer;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class RabbitController {
 
-    private Producer producer = new Producer();
+    @Autowired
+    private Producer producer;
 
-    @GetMapping("/directSend")
-    public void directSend(){
-      producer.directSend("directSend");
+    @RequestMapping("/directSend")
+    public boolean directSend(){
+      return producer.directSend("directSend");
     }
-    @GetMapping("/topicSend")
-    public void topicSend(){
+    @RequestMapping("/topicSend")
+    public ResponseApi topicSend(){
         producer.topicSend("topicSend");
+        return ResponseApi.OK();
     }
-    @GetMapping("/fanoutSend")
-    public void fanoutSend(){
-        producer.fanoutSend("fanoutSend");
+    @RequestMapping("/fanoutSend")
+    public boolean fanoutSend(){
+        return producer.fanoutSend("fanoutSend");
     }
 }

@@ -1,5 +1,6 @@
 package co.goho.qingxu.rabbitmq.rabbit;
 
+import co.goho.qingxu.rabbitmq.config.DemoException;
 import co.goho.qingxu.rabbitmq.config.RabbitDic;
 import com.rabbitmq.client.Channel;
 import org.slf4j.Logger;
@@ -36,13 +37,13 @@ public class Consumer {
         Long deliveryTag = message.getMessageProperties().getDeliveryTag();
         try {
             log.info("接收到TOPIC_QUEUE_ONE消息:{}", msg);
-            //发生异常
-            log.error("发生异常");
-            int i = 1 / 0;
-            //告诉服务器收到这条消息 已经被我消费了 可以在队列删掉 这样以后就不会再发了 否则消息服务器以为这条消息没处理掉 后续还会在发
             channel.basicAck(deliveryTag, false);
+            //发生异常
+            //log.error("发生异常");
+            //int i = 1 / 0;
+            //告诉服务器收到这条消息 已经被我消费了 可以在队列删掉 这样以后就不会再发了 否则消息服务器以为这条消息没处理掉 后续还会在发
         } catch (Exception e) {
-            log.error("接收消息失败,重新放回队列");
+            log.error("接收消息失败,重新放回队列"+"/n"+e.getMessage());
             // 解决方案，剔除此消息，然后记录到db中去补偿
             //channel.basicNack(deliveryTag, false, true);
             //拒绝消息 requeu，为true，代表重新放入队列多次失败重新放回会导致队列堵塞或死循环问题，
@@ -70,7 +71,7 @@ public class Consumer {
             //多次失败重新放回会导致队列堵塞或死循环问题 丢弃这条消息
 //   channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, false);
             channel.basicReject(deliveryTag, true);
-            log.error("接收消息失败");
+            log.error("接收消息失败"+e.getMessage());
         }
     }
 
