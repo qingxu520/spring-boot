@@ -6,6 +6,7 @@
         <module>spring-boot-first</module>
         <module>spring-boot-manydatasources</module>
         <module>rabbitmq</module>
+        <module>test</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
