@@ -10,13 +10,11 @@ public class test {
         user.setCode(true);
         user.setId("1");
         user.setName("2");
-        user.setSjhm("3");
-        user.setSfzh("4");
-        user.setXb("6");
         user.setOoo(5);
-        System.out.println(BeanUtils.getValueStringOrder(user));
+        user.setSjhm("");
+        //user.setSfzh("4");
+        user.setXb("6");
         System.out.println(BeanUtils.getValueString(user));
-
     }
 
 }

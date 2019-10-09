@@ -2,7 +2,9 @@ package co.goho.qingxu.utils;
 
 import co.goho.qingxu.annotation.Ignore;
 import co.goho.qingxu.annotation.Order;
+import org.apache.commons.lang3.StringUtils;
 
+import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -11,6 +13,14 @@ import java.util.Comparator;
 import java.util.List;
 
 public class BeanUtils {
+
+    public static boolean isKeyEquals(Object o, HttpServletRequest request){
+        String keyValue = getValueString(o)+request.getParameter("timeStamp")+request.getParameter("requestId");
+        if(MD5Utils.encode(keyValue).equals(request.getParameter("secret"))){
+            return true;
+        }
+        return false;
+    }
 
     public static String getValueString(Object o){
         Field[] fields = o.getClass().getDeclaredFields();
@@ -23,10 +33,15 @@ public class BeanUtils {
             try {
                 Method m = (Method) o.getClass().getMethod("get" + getMethodName(f.getName()));
                 invoke = m.invoke(o);
-                valueString=valueString+=invoke;
+                if(invoke!=null&& StringUtils.isNotBlank(invoke.toString())){
+                    valueString=valueString+"&"+f.getName()+"="+invoke.toString();
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }
+        if(StringUtils.isNotBlank(valueString)){
+            valueString=valueString.substring(1,valueString.length());
         }
         return valueString;
     }
