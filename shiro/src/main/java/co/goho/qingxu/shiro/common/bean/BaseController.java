@@ -42,7 +42,7 @@ public class BaseController
      * @param rows 影响行数
      * @return 操作结果
      */
-    protected AjaxResult toAjax(int rows)
+    protected ResponseResult toAjax(int rows)
     {
         return rows > 0 ? success() : error();
     }
@@ -53,7 +53,7 @@ public class BaseController
      * @param result 结果
      * @return 操作结果
      */
-    protected AjaxResult toAjax(boolean result)
+    protected ResponseResult toAjax(boolean result)
     {
         return result ? success() : error();
     }
@@ -61,41 +61,41 @@ public class BaseController
     /**
      * 返回成功
      */
-    public AjaxResult success()
+    public ResponseResult success()
     {
-        return AjaxResult.success();
+        return ResponseResult.success();
     }
 
     /**
      * 返回失败消息
      */
-    public AjaxResult error()
+    public ResponseResult error()
     {
-        return AjaxResult.error();
+        return ResponseResult.error();
     }
 
     /**
      * 返回成功消息
      */
-    public AjaxResult success(String message)
+    public ResponseResult success(String message)
     {
-        return AjaxResult.success(message);
+        return ResponseResult.success(message);
     }
 
     /**
      * 返回失败消息
      */
-    public AjaxResult error(String message)
+    public ResponseResult error(String message)
     {
-        return AjaxResult.error(message);
+        return ResponseResult.error(message);
     }
 
     /**
      * 返回错误码消息
      */
-    public AjaxResult error(AjaxResult.Type type, String message)
+    public ResponseResult error(ResponseResult.Type type, String message)
     {
-        return new AjaxResult(type, message);
+        return new ResponseResult(type, message);
     }
 
     /**

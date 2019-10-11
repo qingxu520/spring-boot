@@ -1,0 +1,14 @@
+package co.goho.qingxu.easy;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+public class ShiroEasyApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ShiroEasyApplication.class, args);
+	}
+
+}

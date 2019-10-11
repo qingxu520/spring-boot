@@ -8,6 +8,7 @@
         <module>rabbitmq</module>
         <module>test</module>
         <module>shiro</module>
+        <module>shiro-easy</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
