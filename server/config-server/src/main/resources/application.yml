@@ -3,8 +3,6 @@ server:
 spring:
   application:
     name: config-server
-  profiles:
-    active: native
   cloud:
     config:
       server:
@@ -12,7 +10,12 @@ spring:
           uri: https://github.com/qingxu520/spring-boot.git
           username: qingxu520
           password: guwenjun1994
-          search-paths:
+          search-paths: /server/config/
+  security:
+    user:
+      name: qingxu
+      password: 111111
+
 
 
 
