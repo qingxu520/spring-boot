@@ -1,5 +1,6 @@
 package co.goho.qingxu.easy.config.datasource;
 
+import co.goho.qingxu.easy.conmmon.constant.DataSourceNames;
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;

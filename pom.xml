@@ -7,8 +7,8 @@
         <module>spring-boot-manydatasources</module>
         <module>rabbitmq</module>
         <module>test</module>
-        <module>shiro</module>
         <module>shiro-easy</module>
+        <module>server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

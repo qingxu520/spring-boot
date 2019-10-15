@@ -1,6 +1,8 @@
 package co.goho.qingxu.easy.conmmon.base;
 
+import co.goho.qingxu.easy.bean.SysUser;
 import co.goho.qingxu.easy.conmmon.utils.UuIdUtil;
+import co.goho.qingxu.easy.web.util.ShiroUtils;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -36,24 +38,34 @@ public class BaseEntity implements Serializable {
     @Column(nullable = false)
     protected String updateBy;
 
-    /*删除标识 0:未删除 ；1:已删除*/
+    /*状态 0:正常 ；1:停用; 2:删除*/
     @Column(nullable = false)
-    protected String delFlag="0";
+    protected String status="0";
 
     /*是否新增 true*/
     @Transient
     protected Boolean newFlag = true;
 
+    /** 备注 */
+    @Column
+    private String remark;
+
     public void inParst(){
         setId(UuIdUtil.getUuID());
-        setCreateBy("sys");
-        setUpdateBy("sys");
+        SysUser user = ShiroUtils.getSysUser();
+        if(user!=null){
+            setCreateBy(user.getId());
+            setUpdateBy(user.getId());
+        }else {
+            setCreateBy("system");
+            setUpdateBy("system");
+        }
         setCreateDate(new Date());
         setUpdateDate(getCreateDate());
     }
 
     public void upParst(){
-        setUpdateBy("sys");
+        SysUser user = ShiroUtils.getSysUser();
         setUpdateDate(new Date());
     }
 

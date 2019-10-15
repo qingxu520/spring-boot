@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -33,7 +35,7 @@ public class SysRole extends BaseEntity {
 
     /** 角色排序 */
     @Column
-    private String roleSort;
+    private Integer orderNum;
 
     /** 数据范围（1：所有数据权限；2：自定义数据权限；3：本部门数据权限；4：本部门及以下数据权限） */
     @Column
@@ -47,10 +49,25 @@ public class SysRole extends BaseEntity {
     @Column
     private boolean flag = false;
 
+    /** 所属部门Id */
+    @Column
+    private String deptId;
+
+    /** 所属部门*/
+    @ManyToOne(fetch= FetchType.EAGER)//立即从数据库中进行加载数据;
+    @JoinColumn(name = "deptId",insertable = false, updatable = false)
+    private SysDept dept;
+
     /** 菜单组 */
     @ManyToMany(fetch= FetchType.EAGER)
-    @JoinTable(name="sys_user_role",joinColumns={@JoinColumn(name="roleId")},inverseJoinColumns={@JoinColumn(name="menuId")})
+    @JoinTable(name="sys_role_menu",joinColumns={@JoinColumn(name="role_id")},inverseJoinColumns={@JoinColumn(name="menu_id")})
+    @Fetch(FetchMode.SUBSELECT)
     private List<SysMenu> menus;
+
+    @ManyToMany(fetch= FetchType.EAGER)//立即从数据库中进行加载数据;
+    @JoinTable(name = "sys_user_role", joinColumns = { @JoinColumn(name = "role_id") }, inverseJoinColumns ={@JoinColumn(name = "user_id")})
+    @Fetch(FetchMode.SUBSELECT)
+    private List<SysUser> users;
 
     @NotBlank(message = "角色名称不能为空")
     @Size(min = 0, max = 30, message = "角色名称长度不能超过30个字符")
@@ -72,12 +89,12 @@ public class SysRole extends BaseEntity {
         this.roleKey = roleKey;
     }
 
-    public String getRoleSort() {
-        return roleSort;
+    public Integer getOrderNum() {
+        return orderNum;
     }
 
-    public void setRoleSort(String roleSort) {
-        this.roleSort = roleSort;
+    public void setOrderNum(Integer orderNum) {
+        this.orderNum = orderNum;
     }
 
     public String getDataScope() {
@@ -96,11 +113,35 @@ public class SysRole extends BaseEntity {
         this.status = status;
     }
 
+    public List<SysMenu> getMenus() {
+        return menus;
+    }
+
+    public void setMenus(List<SysMenu> menus) {
+        this.menus = menus;
+    }
+
     public boolean isFlag() {
         return flag;
     }
 
     public void setFlag(boolean flag) {
         this.flag = flag;
+    }
+
+    public String getDeptId() {
+        return deptId;
+    }
+
+    public void setDeptId(String deptId) {
+        this.deptId = deptId;
+    }
+
+    public SysDept getDept() {
+        return dept;
+    }
+
+    public void setDept(SysDept dept) {
+        this.dept = dept;
     }
 }

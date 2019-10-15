@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -38,7 +40,7 @@ public class SysMenu extends BaseEntity {
 
     /** 显示顺序 */
     @Column
-    private String orderNum;
+    private Integer orderNum;
 
     /** 菜单URL */
     @Column
@@ -65,9 +67,16 @@ public class SysMenu extends BaseEntity {
     private String icon;
 
     /** 子菜单 */
-    @ManyToMany(fetch= FetchType.EAGER)//立即从数据库中进行加载数据;
-    @JoinTable(name = "sys_menu", joinColumns = { @JoinColumn(name = "parentId") }, inverseJoinColumns ={@JoinColumn(name = "id")})
+    @OneToMany(fetch= FetchType.EAGER)//立即从数据库中进行加载数据;
+    @JoinColumn(name = "parentId",insertable = false, updatable = false)
+    @Fetch(FetchMode.SUBSELECT)
     private List<SysMenu> children;
+
+    /** 菜单组 */
+    @ManyToMany(fetch= FetchType.EAGER)
+    @JoinTable(name="sys_role_menu",joinColumns={@JoinColumn(name="menu_id")},inverseJoinColumns={@JoinColumn(name="role_id")})
+    @Fetch(FetchMode.SUBSELECT)
+    private List<SysRole> roles;
 
     @NotBlank(message = "菜单名称不能为空")
     @Size(min = 0, max = 50, message = "菜单名称长度不能超过50个字符")
@@ -91,16 +100,23 @@ public class SysMenu extends BaseEntity {
         this.parentName = parentName;
     }
 
+    public String getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
+    }
+
     @NotBlank(message = "显示顺序不能为空")
-    public String getOrderNum()
-    {
+    public Integer getOrderNum() {
         return orderNum;
     }
 
-    public void setOrderNum(String orderNum)
-    {
+    public void setOrderNum(Integer orderNum) {
         this.orderNum = orderNum;
     }
+
 
     @Size(min = 0, max = 200, message = "请求地址不能超过200个字符")
     public String getUrl()
@@ -173,5 +189,13 @@ public class SysMenu extends BaseEntity {
     public void setChildren(List<SysMenu> children)
     {
         this.children = children;
+    }
+
+    public List<SysRole> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<SysRole> roles) {
+        this.roles = roles;
     }
 }

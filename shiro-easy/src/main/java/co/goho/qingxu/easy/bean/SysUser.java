@@ -5,11 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -53,9 +56,40 @@ public class SysUser extends BaseEntity {
     @Column(nullable = false, unique = true)
     private String idcard;
 
+    /** 用户头像 */
+    @Column
+    private String avatar;
+
+    /** 盐加密 */
+    @Column
+    private String salt;
+
+    /** 所属部门Id */
+    @Column
+    private String deptId;
+
+    /** 最后登陆IP */
+    @Column
+    private String loginIp;
+
+    /** 最后登陆时间 */
+    @Column
+    private Date loginDate;
+
+    /** 所属部门*/
+    @ManyToOne(fetch= FetchType.EAGER)//立即从数据库中进行加载数据;
+    @JoinColumn(name="deptId",insertable = false, updatable = false)
+    private SysDept dept;
+
     @ManyToMany(fetch= FetchType.EAGER)//立即从数据库中进行加载数据;
-    @JoinTable(name = "sys_user_role", joinColumns = { @JoinColumn(name = "userId") }, inverseJoinColumns ={@JoinColumn(name = "roleId")})
+    @JoinTable(name = "sys_user_role", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns ={@JoinColumn(name = "role_id")})
+    @Fetch(FetchMode.SUBSELECT)
     private List<SysRole> roles;
+
+
+    public boolean isAdmin() {
+        return this.id != null && "1".equals(this.id);
+    }
 
     @NotBlank(message = "姓名不能为空")
     public String getName() {
@@ -127,5 +161,53 @@ public class SysUser extends BaseEntity {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public String getDeptId() {
+        return deptId;
+    }
+
+    public void setDeptId(String deptId) {
+        this.deptId = deptId;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public SysDept getDept() {
+        return dept;
+    }
+
+    public void setDept(SysDept dept) {
+        this.dept = dept;
+    }
+
+    public String getLoginIp() {
+        return loginIp;
+    }
+
+    public void setLoginIp(String loginIp) {
+        this.loginIp = loginIp;
+    }
+
+    public Date getLoginDate() {
+        return loginDate;
+    }
+
+    public void setLoginDate(Date loginDate) {
+        this.loginDate = loginDate;
     }
 }

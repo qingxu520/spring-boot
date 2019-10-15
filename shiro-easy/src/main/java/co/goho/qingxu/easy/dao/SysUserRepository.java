@@ -8,7 +8,14 @@ import java.util.List;
 
 @Repository
 public interface SysUserRepository extends JpaRepository<SysUser, String> {
+
     SysUser findByUserName(String userName);
+
+    SysUser findByPhone(String phone);
+
+    SysUser findByEmail(String email);
+
     SysUser findByIdcard(String idcard);
+
     List<SysUser> findByNameLike(String name);
 }

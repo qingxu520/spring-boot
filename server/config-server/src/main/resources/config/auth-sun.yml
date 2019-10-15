@@ -1,0 +1,105 @@
+server:
+  port: 8491
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.210.80.56:8880/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+  feign:
+    httpclient:
+      enabled: true
+    url: 127.0.0.1:8880
+    client:
+      config:
+        feignName:
+          connectTimeout: 5000
+          readTimeout: 5000
+          loggerLevel: full
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:oracle:thin:@10.210.80.46/ZHFWQC
+      username: cen_elk
+      password: cen_elk
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+      initial-size: 1
+      max-active: 5
+      min-idle: 1
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 5
+      validation-query: SELECT 1 FROM DUAL
+      validation-query-timeout: 60000
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 100000
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico"
+        session-stat-enable: true
+        profile-enable: true
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        reset-enable: true
+        login-username: admin
+        login-password: 111111
+        allow: 127.0.0.1
+      aop-patterns: com.wonders.api.apiService.*
+
+  jpa:
+    #hibernate:
+    #ddl-auto: validate
+    show-sql: true
+  jackson:
+    time-zone: GMT+8
+  redis:
+    host: 10.210.80.47
+    port: 6379
+    password: 123456
+    timeout: 10s
+    jedis:
+      pool:
+        #最大连接数
+        max-active: 8
+        #最大阻塞等待时间(负数表示没限制)
+        max-wait: -1s
+        #最大空闲
+        max-idle: 8
+        #最小空闲
+        min-idle: 0
+  data:
+    elasticsearch:
+      cluster-name: elastic-logs
+      cluster-nodes: 10.210.80.112:9300,10.210.80.112:9302
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+  freemarker:
+    request-context-attribute: request
+    templateLoaderPath: classpath:/templates/
+    suffix: .ftl
+    charset: UTF-8
+logging:
+  config: classpath:logback.xml
+swagger:
+  enable: true
+management:
+  health:
+    elasticsearch:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: info,health,metrics,env
+      base-path: /actuator
+swaggerApi:
+  title: API管理平台API
+  path: com.wonders.auth.controller
