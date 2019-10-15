@@ -9,9 +9,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/yb2020/spring-cloud-study-example.git
-          username:
-          password: your github password
+          uri: https://github.com/qingxu520/spring-boot.git
+          username: qingxu520
+          password: guwenjun1994
           search-paths:
 
 
