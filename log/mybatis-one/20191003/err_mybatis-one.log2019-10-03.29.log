@@ -1,0 +1,2 @@
+03:41:07.436 [Thread-6] DEBUG o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+03:41:07.438 [Thread-6] DEBUG o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans

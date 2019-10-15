@@ -1,0 +1,14 @@
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/service/UserService.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/controller/UserController.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/mapper/UserMapper.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/common/bean/BaseEntity.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/config/datasource/DataSourceConfig.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/config/datasource/DataSourceNames.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/pojo/User.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/pojo/Neo.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/config/datasource/DruidConfig.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/MybatisAopApplication.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/config/datasource/DynamicDataSource.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/common/utils/UuIdUtil.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/config/datasource/DataSource.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/mybatis-one-aop/src/main/java/co/goho/qingxu/mybatistag/config/datasource/DynamicDataSourceAspect.java

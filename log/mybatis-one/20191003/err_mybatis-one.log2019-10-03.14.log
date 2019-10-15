@@ -1,0 +1,16 @@
+03:36:07.646 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1

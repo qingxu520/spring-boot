@@ -1,0 +1,8 @@
+03:41:07.438 [Thread-6] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+03:41:07.442 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+03:41:07.442 [Thread-6] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+03:41:07.444 [HikariPool-2 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1068e7ec: (connection evicted)
+03:41:07.449 [HikariPool-2 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3f9bd469: (connection evicted)
+03:41:07.449 [HikariPool-2 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7ea6de52: (connection evicted)
+03:41:07.450 [HikariPool-2 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4f926124: (connection evicted)
+03:41:07.451 [HikariPool-2 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@67c67d70: (connection evicted)

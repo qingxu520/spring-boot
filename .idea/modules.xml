@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/server/config-server/config-server.iml" filepath="$PROJECT_DIR$/server/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/server/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-manydatasources/mybatis-one/mybatis-one.iml" filepath="$PROJECT_DIR$/spring-boot-manydatasources/mybatis-one/mybatis-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-manydatasources/mybatis-one-aop/mybatis-one-aop.iml" filepath="$PROJECT_DIR$/spring-boot-manydatasources/mybatis-one-aop/mybatis-one-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq/rabbitmq.iml" filepath="$PROJECT_DIR$/rabbitmq/rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shiro-easy/shiro-easy.iml" filepath="$PROJECT_DIR$/shiro-easy/shiro-easy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot.iml" filepath="$PROJECT_DIR$/spring-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-first/spring-boot-bean/spring-boot-bean.iml" filepath="$PROJECT_DIR$/spring-boot-first/spring-boot-bean/spring-boot-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-first/spring-boot-common/spring-boot-common.iml" filepath="$PROJECT_DIR$/spring-boot-first/spring-boot-common/spring-boot-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-first/spring-boot-dao-jpa/spring-boot-dao-jpa.iml" filepath="$PROJECT_DIR$/spring-boot-first/spring-boot-dao-jpa/spring-boot-dao-jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-first/spring-boot-first.iml" filepath="$PROJECT_DIR$/spring-boot-first/spring-boot-first.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-manydatasources/spring-boot-manydatasources.iml" filepath="$PROJECT_DIR$/spring-boot-manydatasources/spring-boot-manydatasources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-first/spring-boot-service/spring-boot-service.iml" filepath="$PROJECT_DIR$/spring-boot-first/spring-boot-service/spring-boot-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-first/spring-boot-web/spring-boot-web.iml" filepath="$PROJECT_DIR$/spring-boot-first/spring-boot-web/spring-boot-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-first/spring-boot-webflux/spring-boot-webflux.iml" filepath="$PROJECT_DIR$/spring-boot-first/spring-boot-webflux/spring-boot-webflux.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-manydatasources/spring-data-jpa/spring-data-jpa.iml" filepath="$PROJECT_DIR$/spring-boot-manydatasources/spring-data-jpa/spring-data-jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-manydatasources/spring-data-jpa-aop/spring-data-jpa-aop.iml" filepath="$PROJECT_DIR$/spring-boot-manydatasources/spring-data-jpa-aop/spring-data-jpa-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+    </modules>
+  </component>
+</project>

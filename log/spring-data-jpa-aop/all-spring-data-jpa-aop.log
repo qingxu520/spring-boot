@@ -1,0 +1,30 @@
+2019-10-10 22:20:59 514 [main] co.goho.qingxu.jpaaop.JapAopApplication-logStarting-50[INFO ] :Starting JapAopApplication on qhdeMacBook-Pro.local with PID 65116 (/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/target/classes started by qh in /Users/qh/Documents/ideaWorkspace/spring-boot)
+2019-10-10 22:20:59 532 [main] co.goho.qingxu.jpaaop.JapAopApplication-logStartupProfileInfo-648[INFO ] :No active profile set, falling back to default profiles: default
+2019-10-10 22:21:00 047 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate-registerRepositoriesIn-126[INFO ] :Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-10 22:21:00 108 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate-registerRepositoriesIn-182[INFO ] :Finished Spring Data repository scanning in 55ms. Found 1 repository interfaces.
+2019-10-10 22:21:00 415 [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-postProcessAfterInitialization-330[INFO ] :Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ca3b6b10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-10 22:21:00 771 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer-initialize-90[INFO ] :Tomcat initialized with port(s): 8001 (http)
+2019-10-10 22:21:00 784 [main] org.apache.coyote.http11.Http11NioProtocol-log-173[INFO ] :Initializing ProtocolHandler ["http-nio-8001"]
+2019-10-10 22:21:00 795 [main] org.apache.catalina.core.StandardService-log-173[INFO ] :Starting service [Tomcat]
+2019-10-10 22:21:00 796 [main] org.apache.catalina.core.StandardEngine-log-173[INFO ] :Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-10 22:21:00 926 [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-log-173[INFO ] :Initializing Spring embedded WebApplicationContext
+2019-10-10 22:21:00 927 [main] org.springframework.web.context.ContextLoader-prepareWebApplicationContext-284[INFO ] :Root WebApplicationContext: initialization completed in 1356 ms
+2019-10-10 22:21:00 973 [main] org.springframework.boot.web.servlet.RegistrationBean-register-110[INFO ] :Servlet statViewServlet was not registered (possibly already registered?)
+2019-10-10 22:21:01 175 [main] UserController-determineCurrentLookupKey-30[INFO ] :当前数据源：{}null
+2019-10-10 22:21:01 206 [main] com.alibaba.druid.pool.DruidDataSource-init-1003[INFO ] :{dataSource-1} inited
+2019-10-10 22:21:01 761 [main] org.hibernate.Version-logVersion-46[INFO ] :HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-10 22:21:01 763 [main] org.hibernate.cfg.Environment-<clinit>-213[INFO ] :HHH000206: hibernate.properties not found
+2019-10-10 22:21:01 916 [main] org.hibernate.annotations.common.Version-<clinit>-49[INFO ] :HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-10 22:21:02 058 [main] UserController-determineCurrentLookupKey-30[INFO ] :当前数据源：{}null
+2019-10-10 22:21:02 063 [main] org.hibernate.dialect.Dialect-<init>-157[INFO ] :HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-10-10 22:21:02 624 [main] UserController-determineCurrentLookupKey-30[INFO ] :当前数据源：{}null
+2019-10-10 22:21:02 661 [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean-buildNativeEntityManagerFactory-415[INFO ] :Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-10 22:21:03 317 [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor-initialize-171[INFO ] :Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-10 22:21:03 645 [main] org.apache.coyote.http11.Http11NioProtocol-log-173[INFO ] :Starting ProtocolHandler ["http-nio-8001"]
+2019-10-10 22:21:03 677 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer-start-202[INFO ] :Tomcat started on port(s): 8001 (http) with context path ''
+2019-10-10 22:21:03 680 [main] co.goho.qingxu.jpaaop.JapAopApplication-logStarted-59[INFO ] :Started JapAopApplication in 4.544 seconds (JVM running for 5.174)
+2019-10-10 22:21:08 820 [Thread-12] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor-shutdown-208[INFO ] :Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-10 22:21:08 822 [Thread-12] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean-destroy-597[INFO ] :Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-10 22:21:08 826 [Thread-12] com.alibaba.druid.pool.DruidDataSource-close-1965[INFO ] :{dataSource-0} closing ...
+2019-10-10 22:21:08 826 [Thread-12] com.alibaba.druid.pool.DruidDataSource-close-1965[INFO ] :{dataSource-1} closing ...
+2019-10-10 22:21:08 829 [Thread-12] com.alibaba.druid.pool.DruidDataSource-close-2037[INFO ] :{dataSource-1} closed

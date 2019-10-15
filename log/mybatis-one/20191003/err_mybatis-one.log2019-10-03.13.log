@@ -1,0 +1,5 @@
+03:36:07.644 [http-nio-8000-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/user/selectAll?name=%E5%88%98%E6%B6%9B", parameters={masked}
+03:36:07.646 [http-nio-8000-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to public java.util.Map<java.lang.String, java.util.List<co.goho.qingxu.mybatis.pojo.User>> co.goho.qingxu.mybatis.controller.UserController.selectAll()
+03:36:07.646 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+03:36:07.646 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ed81641] was not registered for synchronization because synchronization is not active
+03:36:07.646 [http-nio-8000-exec-2] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource

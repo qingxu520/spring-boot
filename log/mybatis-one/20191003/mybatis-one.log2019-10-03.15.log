@@ -1,0 +1,32 @@
+03:36:07.648 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+03:36:07.649 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/test
+03:36:07.649 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+03:36:07.649 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+03:36:07.649 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+03:36:07.649 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+03:36:07.649 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+03:36:07.650 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+03:36:07.650 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+03:36:07.650 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+03:36:07.650 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+03:36:07.650 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+03:36:07.650 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+03:36:07.650 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+03:36:07.650 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+03:36:07.650 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+03:36:07.650 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - username........................"test"
+03:36:07.650 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+03:36:07.650 [http-nio-8000-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+03:36:07.991 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38f1379a
+03:36:07.994 [http-nio-8000-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+03:36:07.997 [http-nio-8000-exec-2] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1786491786 wrapping com.mysql.cj.jdbc.ConnectionImpl@38f1379a] will not be managed by Spring
+03:36:08.003 [http-nio-8000-exec-2] DEBUG c.g.q.m.mapper.UserMapper.selectAll - ==>  Preparing: select * from tb_user 
+03:36:08.029 [http-nio-8000-exec-2] DEBUG c.g.q.m.mapper.UserMapper.selectAll - ==> Parameters: 
+03:36:08.061 [http-nio-8000-exec-2] DEBUG c.g.q.m.mapper.UserMapper.selectAll - <==      Total: 4
+03:36:08.064 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ed81641]
+03:36:08.066 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+03:36:08.066 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f6f324e] was not registered for synchronization because synchronization is not active
+03:36:08.066 [http-nio-8000-exec-2] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+03:36:08.066 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-2 - configuration:
+03:36:08.066 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+03:36:08.066 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true

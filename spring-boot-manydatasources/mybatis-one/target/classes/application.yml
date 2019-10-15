@@ -1,0 +1,36 @@
+qingxu:
+  title: 轻许
+  description: 轻许的learn
+logging:
+  #path: /Users/qh/Documents/ideaWorkspace/spring-boot/log
+  config: classpath:logback-spring.xml
+  #file: mybatis-one
+ # level:
+  #  root: WARN
+  #  org:
+   #   springframework:
+    #    web: DEBUG
+
+spring:
+  datasource:
+    test:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test
+      username: test
+      password: 111111
+    test1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test1
+      username: test
+      password: 111111
+
+mybatis:
+  test:
+    mapper-locations: classpath:mapping/*.xml
+    type-aliases-package: co.goho.qingxu.mybatisone.mapper
+  test1:
+    mapper-locations: classpath:mapping1/*.xml
+    type-aliases-package: co.goho.qingxu.mybatisone.mapper1
+
+server:
+  port: 8000

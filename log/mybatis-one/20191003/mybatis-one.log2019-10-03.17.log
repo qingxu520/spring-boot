@@ -1,0 +1,32 @@
+03:36:08.082 [http-nio-8000-exec-2] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1068e7ec
+03:36:08.082 [http-nio-8000-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+03:36:08.082 [http-nio-8000-exec-2] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1448303341 wrapping com.mysql.cj.jdbc.ConnectionImpl@1068e7ec] will not be managed by Spring
+03:36:08.083 [http-nio-8000-exec-2] DEBUG c.g.q.m.m.UserMapper1.selectAll - ==>  Preparing: select * from tb_user 
+03:36:08.083 [http-nio-8000-exec-2] DEBUG c.g.q.m.m.UserMapper1.selectAll - ==> Parameters: 
+03:36:08.087 [http-nio-8000-exec-2] DEBUG c.g.q.m.m.UserMapper1.selectAll - <==      Total: 4
+03:36:08.087 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f6f324e]
+03:36:08.087 [http-nio-8000-exec-2] INFO  c.g.q.m.controller.UserController - ==========查询成功：总数为2==========
+03:36:08.087 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+03:36:08.087 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25272cdc] was not registered for synchronization because synchronization is not active
+03:36:08.087 [http-nio-8000-exec-2] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+03:36:08.087 [http-nio-8000-exec-2] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1777307303 wrapping com.mysql.cj.jdbc.ConnectionImpl@38f1379a] will not be managed by Spring
+03:36:08.087 [http-nio-8000-exec-2] DEBUG c.g.q.m.mapper.UserMapper.selectAll - ==>  Preparing: select * from tb_user 
+03:36:08.087 [http-nio-8000-exec-2] DEBUG c.g.q.m.mapper.UserMapper.selectAll - ==> Parameters: 
+03:36:08.089 [http-nio-8000-exec-2] DEBUG c.g.q.m.mapper.UserMapper.selectAll - <==      Total: 4
+03:36:08.089 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25272cdc]
+03:36:08.089 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+03:36:08.089 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c36affa] was not registered for synchronization because synchronization is not active
+03:36:08.089 [http-nio-8000-exec-2] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+03:36:08.089 [http-nio-8000-exec-2] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@283849580 wrapping com.mysql.cj.jdbc.ConnectionImpl@1068e7ec] will not be managed by Spring
+03:36:08.089 [http-nio-8000-exec-2] DEBUG c.g.q.m.m.UserMapper1.selectAll - ==>  Preparing: select * from tb_user 
+03:36:08.090 [http-nio-8000-exec-2] DEBUG c.g.q.m.m.UserMapper1.selectAll - ==> Parameters: 
+03:36:08.093 [http-nio-8000-exec-2] DEBUG c.g.q.m.m.UserMapper1.selectAll - <==      Total: 4
+03:36:08.093 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c36affa]
+03:36:08.093 [http-nio-8000-exec-2] ERROR c.g.q.m.controller.UserController - ==========查询成功：总数为2==========
+03:36:08.093 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+03:36:08.093 [http-nio-8000-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b992a48] was not registered for synchronization because synchronization is not active
+03:36:08.093 [http-nio-8000-exec-2] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+03:36:08.093 [http-nio-8000-exec-2] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@861302156 wrapping com.mysql.cj.jdbc.ConnectionImpl@38f1379a] will not be managed by Spring
+03:36:08.093 [http-nio-8000-exec-2] DEBUG c.g.q.m.mapper.UserMapper.selectAll - ==>  Preparing: select * from tb_user 
+03:36:08.093 [http-nio-8000-exec-2] DEBUG c.g.q.m.mapper.UserMapper.selectAll - ==> Parameters: 
+03:36:08.095 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=1, idle=0, waiting=0)

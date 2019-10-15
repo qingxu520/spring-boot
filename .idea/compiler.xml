@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mybatis-one-aop" />
+        <module name="spring-data-jpa-aop" />
+        <module name="spring-boot-webflux" />
+        <module name="spring-data-jpa" />
+        <module name="spring-boot-bean" />
+        <module name="shiro-easy" />
+        <module name="test" />
+        <module name="mybatis-one" />
+        <module name="spring-boot-common" />
+        <module name="rabbitmq" />
+        <module name="eureka-server" />
+        <module name="spring-boot-dao-jpa" />
+        <module name="spring-boot-service" />
+        <module name="spring-boot-web" />
+        <module name="config-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-server" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="logback" target="1.8" />
+      <module name="logs" target="1.8" />
+      <module name="mybatis-one" target="1.8" />
+      <module name="mybatis-one-aop" target="1.8" />
+      <module name="rabbitmq" target="1.8" />
+      <module name="server" target="1.8" />
+      <module name="shiro" target="1.8" />
+      <module name="shiro-easy" target="1.8" />
+      <module name="shiro-ehcache" target="1.8" />
+      <module name="shiro-redis" target="1.8" />
+      <module name="spring-boot" target="1.8" />
+      <module name="spring-boot-bean" target="1.8" />
+      <module name="spring-boot-common" target="1.8" />
+      <module name="spring-boot-dao-jpa" target="1.8" />
+      <module name="spring-boot-first" target="1.8" />
+      <module name="spring-boot-manydatasources" target="1.8" />
+      <module name="spring-boot-service" target="1.8" />
+      <module name="spring-boot-web" target="1.8" />
+      <module name="spring-boot-webflux" target="1.8" />
+      <module name="spring-data-jpa" target="1.8" />
+      <module name="spring-data-jpa-aop" target="1.8" />
+      <module name="test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-server" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="logback" options="-parameters" />
+      <module name="logs" options="-parameters" />
+      <module name="mybatis-one" options="-parameters" />
+      <module name="mybatis-one-aop" options="-parameters" />
+      <module name="rabbitmq" options="-parameters" />
+      <module name="server" options="-parameters" />
+      <module name="shiro" options="-parameters" />
+      <module name="shiro-easy" options="-parameters" />
+      <module name="shiro-ehcache" options="-parameters" />
+      <module name="shiro-redis" options="-parameters" />
+      <module name="spring-boot" options="-parameters" />
+      <module name="spring-boot-bean" options="-parameters" />
+      <module name="spring-boot-common" options="-parameters" />
+      <module name="spring-boot-dao-jpa" options="-parameters" />
+      <module name="spring-boot-first" options="-parameters" />
+      <module name="spring-boot-manydatasources" options="-parameters" />
+      <module name="spring-boot-service" options="-parameters" />
+      <module name="spring-boot-web" options="-parameters" />
+      <module name="spring-boot-webflux" options="-parameters" />
+      <module name="spring-data-jpa" options="-parameters" />
+      <module name="spring-data-jpa-aop" options="-parameters" />
+      <module name="test" options="-parameters" />
+    </option>
+  </component>
+</project>

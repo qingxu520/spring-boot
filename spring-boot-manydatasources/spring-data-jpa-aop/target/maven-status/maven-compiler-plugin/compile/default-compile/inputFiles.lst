@@ -1,0 +1,15 @@
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/service/UserService.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/config/datasource/DataSourceAspect.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/JapAopApplication.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/pojo/User.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/common/bean/BaseEntity.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/config/datasource/DynamicDataSourceAspect.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/config/datasource/DataSource.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/dao/UserRepository.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/common/utils/UuIdUtil.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/config/datasource/DruidConfig.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/config/datasource/DynamicDataSource.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/pojo/Neo.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/config/datasource/DataSourceConfig.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/config/datasource/DataSourceNames.java
+/Users/qh/Documents/ideaWorkspace/spring-boot/spring-boot-manydatasources/spring-data-jpa-aop/src/main/java/co/goho/qingxu/jpaaop/controller/UserController.java

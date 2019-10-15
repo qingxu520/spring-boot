@@ -1,0 +1,43 @@
+qingxu:
+  title: 轻许
+  description: 轻许的learn
+logging:
+  path: /log
+  level:
+    root: WARN
+    org:
+      springframework:
+        web: DEBUG
+      hibernate: ERROR
+
+spring:
+  datasource:
+    test:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test
+      username: test
+      password: 111111
+    test1:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test1
+      username: test
+      password: 111111
+    druid:
+      filters: stat
+      initial-size: 10
+      max-active: 20
+      min-idle: 8
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        show_sql: true
+        format_sql: true
+        hbm2ddl:
+          auto: update
+
+server:
+  port: 8001
