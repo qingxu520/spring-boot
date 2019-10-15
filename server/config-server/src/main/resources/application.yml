@@ -12,7 +12,7 @@ spring:
           uri: https://github.com/yb2020/spring-cloud-study-example.git
           username:
           password: your github password
-          search-paths: mirco-service-config
+          search-paths:
 
 
 
