@@ -28,14 +28,11 @@ public class BeanUtils extends org.springframework.beans.BeanUtils
      * @param dest 目标对象
      * @param src 源对象
      */
-    public static void copyBeanProp(Object dest, Object src)
-    {
-        try
-        {
+    public static void copyBeanProp(Object dest, Object src) {
+        try {
             copyProperties(src, dest);
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -46,8 +43,7 @@ public class BeanUtils extends org.springframework.beans.BeanUtils
      * @param obj 对象
      * @return 对象的setter方法列表
      */
-    public static List<Method> getSetterMethods(Object obj)
-    {
+    public static List<Method> getSetterMethods(Object obj) {
         // setter方法列表
         List<Method> setterMethods = new ArrayList<Method>();
 
@@ -56,11 +52,9 @@ public class BeanUtils extends org.springframework.beans.BeanUtils
 
         // 查找setter方法
 
-        for (Method method : methods)
-        {
+        for (Method method : methods) {
             Matcher m = SET_PATTERN.matcher(method.getName());
-            if (m.matches() && (method.getParameterTypes().length == 1))
-            {
+            if (m.matches() && (method.getParameterTypes().length == 1)) {
                 setterMethods.add(method);
             }
         }
@@ -75,18 +69,15 @@ public class BeanUtils extends org.springframework.beans.BeanUtils
      * @return 对象的getter方法列表
      */
 
-    public static List<Method> getGetterMethods(Object obj)
-    {
+    public static List<Method> getGetterMethods(Object obj) {
         // getter方法列表
         List<Method> getterMethods = new ArrayList<Method>();
         // 获取所有方法
         Method[] methods = obj.getClass().getMethods();
         // 查找getter方法
-        for (Method method : methods)
-        {
+        for (Method method : methods) {
             Matcher m = GET_PATTERN.matcher(method.getName());
-            if (m.matches() && (method.getParameterTypes().length == 0))
-            {
+            if (m.matches() && (method.getParameterTypes().length == 0)) {
                 getterMethods.add(method);
             }
         }

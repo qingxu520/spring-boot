@@ -1,0 +1,47 @@
+qingxu:
+  title: 轻许
+  description: 轻许的learn
+logging:
+  path: /log
+  level:
+    root: WARN
+    org:
+      springframework:
+        web: DEBUG
+      hibernate: ERROR
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: test
+    password: 111111
+    #driver-class-name: oracle.jdbc.driver.OracleDriver
+    #url: jdbc:oracle:thin:@192.168.0.251:1521:orcl
+    #username: YN_ADMIN
+    #password: 111111
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        show_sql: true
+        format_sql: true
+        hbm2ddl:
+          auto: update
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+  session:
+    store-type: none
+
+server:
+  port: 8008
