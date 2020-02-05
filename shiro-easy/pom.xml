@@ -19,7 +19,7 @@
         <lombok.version>1.18.10</lombok.version>
         <pool2.version>2.7.0</pool2.version>
         <mybatis.version>2.1.0</mybatis.version>
-        <shiro.version>1.4.1</shiro.version>
+        <shiro.version>1.5.0</shiro.version>
         <thymeleaf.extras.shiro.version>2.0.0</thymeleaf.extras.shiro.version>
         <kaptcha.version>2.3.2</kaptcha.version>
         <fastjson.version>1.2.60</fastjson.version>
