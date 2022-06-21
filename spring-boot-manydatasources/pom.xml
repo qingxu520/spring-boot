@@ -21,7 +21,7 @@
         <java.version>1.8</java.version>
         <springBoot.version>2.1.8.RELEASE</springBoot.version>
         <ojdbc6.version>11.2.0.3</ojdbc6.version>
-        <mysql.connector.version>8.0.17</mysql.connector.version>
+        <mysql.connector.version>8.0.28</mysql.connector.version>
         <lombok.version>1.18.10</lombok.version>
         <pool2.version>2.7.0</pool2.version>
         <mybatis.version>2.1.0</mybatis.version>
